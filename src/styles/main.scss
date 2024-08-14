@@ -1,0 +1,211 @@
+@font-face {
+  font-family: "Euclid Circular A";
+  src: url("../font/Euclid Circular A Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Euclid Circular A";
+  src: url("../font/Euclid Circular A Bold Italic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Euclid Circular A";
+  src: url("../font/Euclid Circular A Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Euclid Circular A";
+  src: url("../font/Euclid Circular A Light Italic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Euclid Circular A";
+  src: url("../font/Euclid Circular A Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Euclid Circular A";
+  src: url("../font/Euclid Circular A Medium Italic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Euclid Circular A";
+  src: url("../font/Euclid Circular A SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Euclid Circular A";
+  src: url("../font/Euclid Circular A SemiBold Italic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Euclid Circular A";
+  src: url("../font/Euclid Circular A Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Euclid Circular A";
+  src: url("../font/Euclid Circular A Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Floreste";
+  src: url("../font/Floreste.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Floreste";
+  src: url("../font/Floreste-Italic.otf") format("opentype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Floreste";
+  src: url("../font/Floreste-Outline.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Floreste";
+  src: url("../font/Floreste-Wavy.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Euclid Circular A", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ae97e8;
+  color: white;
+}
+
+html {
+  font-size: 0.520835vw;
+  -webkit-animation: bugfix infinite 1s;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  color: inherit;
+  align-items: center;
+  cursor: pointer;
+}
+
+.wrapper {
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.main {
+  position: relative;
+  min-height: 100%;
+  flex: 1 1 auto;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
+
+[class*="__container"] {
+  max-width: 180rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@media (max-width: 48em) {
+  html {
+    font-size: calc((100 / 320) * 5vw);
+    -webkit-text-size-adjust: none;
+  }
+
+  body {
+    -webkit-text-size-adjust: none;
+  }
+}
+
+a {
+  color: unset;
+}
+a,
+a:hover {
+  text-decoration: none;
+}
+
+.hero {
+  height: 105.8rem;
+  &__slider {
+    display: flex;
+  }
+  &__content {
+    position: absolute;
+    z-index: 10;
+  }
+  &__slide {
+    width: 34rem;
+    height: 103.8rem;
+
+    .hero__product-img {
+    }
+  }
+  &__slide--active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 107.7rem;
+    position: relative;
+    .hero__product-img {
+      height: 72.5rem;
+      position: relative;
+      z-index: 10;
+    }
+    .hero__background {
+      position: absolute;
+      z-index: 1;
+    }
+  }
+}

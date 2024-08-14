@@ -1,0 +1,60 @@
+.header {
+  background-color: transparent;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5.3rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+  button {
+    font-size: inherit;
+    gap: 1.2rem;
+    font-weight: inherit;
+  }
+  &__catalog-btn {
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+  &__search-btn {
+    svg {
+      width: 2.6rem;
+      height: 2.6rem;
+    }
+  }
+  &__nav {
+    display: flex;
+    gap: 3rem;
+  }
+  &__icons {
+    display: flex;
+    gap: 3.6rem;
+    .header__icon--heart {
+      svg {
+        width: 2.2rem;
+        height: 2rem;
+      }
+    }
+    .header__icon--user {
+      svg {
+        width: 1.8rem;
+        height: 2rem;
+      }
+    }
+    .header__icon--cart {
+      svg {
+        width: 2rem;
+        height: 2.1rem;
+      }
+    }
+  }
+  &__logo {
+    svg {
+      height: 3.7rem;
+      width: 10.4rem;
+    }
+  }
+}
