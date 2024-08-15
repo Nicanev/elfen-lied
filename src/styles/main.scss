@@ -82,17 +82,17 @@
   font-style: italic;
 }
 
-@font-face {
-  font-family: "Floreste";
-  src: url("../font/Floreste-Outline.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-}
+// @font-face {
+//   font-family: "Floreste";
+//   src: url("../font/Floreste-Outline.otf") format("opentype");
+//   font-weight: normal;
+//   font-style: normal;
+// }
 
 @font-face {
   font-family: "Floreste";
   src: url("../font/Floreste-Wavy.otf") format("opentype");
-  font-weight: normal;
+  font-weight: bold;
   font-style: normal;
 }
 
@@ -132,6 +132,10 @@ button {
   cursor: pointer;
 }
 
+ul {
+  list-style: none;
+}
+
 .wrapper {
   font-size: 1.6rem;
   line-height: 2.1rem;
@@ -157,6 +161,11 @@ button {
   padding: 0 1.5rem;
 }
 
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
 @media (max-width: 48em) {
   html {
     font-size: calc((100 / 320) * 5vw);
@@ -168,6 +177,13 @@ button {
   }
 }
 
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
 a {
   color: unset;
 }
@@ -177,19 +193,125 @@ a:hover {
 }
 
 .hero {
+  display: flex;
   height: 105.8rem;
+  margin-bottom: 17rem;
+  position: relative;
+  &__title {
+    position: absolute;
+    text-transform: uppercase;
+    color: #d9ff5a;
+    font-size: 1.8rem;
+    font-weight: 500;
+    top: 30.6rem;
+    left: 6rem;
+  }
+  &__buy-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 500;
+    font-size: 2rem;
+    gap: 1.1rem;
+    width: 37.7rem;
+    height: 21.1rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: url("../images/background/buttonBackground.png");
+    background-size: contain;
+    svg {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+    path {
+      fill: #d9ff5a;
+    }
+  }
   &__slider {
     display: flex;
+    gap: 2rem;
   }
   &__content {
     position: absolute;
+    bottom: 0;
+    left: 0;
+    max-width: 31.2rem;
     z-index: 10;
+  }
+  &__product-title {
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 2.8rem;
+  }
+  &__description {
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+  &__price {
+    display: flex;
+    position: relative;
+    gap: 0.7rem;
+    font-family: "Floreste", sans-serif;
+    font-weight: bold;
+    font-size: 4rem;
+    color: #d9ff5a;
+    &::before {
+      content: "";
+      position: absolute;
+      top: -2.8rem;
+      background-color: #ffffff1f;
+      height: 0.1rem;
+      width: 100%;
+    }
+    span {
+      margin-top: -0.8rem;
+      font-size: 2rem;
+      font-weight: normal;
+    }
+  }
+  &__slide-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4.2rem;
+    color: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    bottom: 6.9rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    span {
+      font-family: "Floreste", sans-serif;
+      font-weight: bold;
+      color: white;
+      font-size: 4rem;
+    }
   }
   &__slide {
     width: 34rem;
     height: 103.8rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 
-    .hero__product-img {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 106%;
+      top: -6rem;
+      border-radius: 5rem;
+      z-index: -1;
+    }
+    &:nth-child(3)::before {
+      background-color: #aecfff;
+    }
+
+    &:nth-child(2)::before {
+      background-color: #fa8fef;
     }
   }
   &__slide--active {
@@ -198,8 +320,9 @@ a:hover {
     align-items: center;
     width: 107.7rem;
     position: relative;
+    margin-left: 6rem;
+    margin-right: 4rem;
     .hero__product-img {
-      height: 72.5rem;
       position: relative;
       z-index: 10;
     }
@@ -207,5 +330,137 @@ a:hover {
       position: absolute;
       z-index: 1;
     }
+  }
+}
+
+.category {
+  margin-bottom: 17rem;
+  &__title {
+    font-size: 6rem;
+    font-weight: 500;
+    margin-bottom: 7rem;
+    text-align: center;
+  }
+  &__list {
+    display: flex;
+    gap: 3rem;
+  }
+  &__item-title {
+    max-width: 18.4rem;
+    font-weight: 500;
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    position: absolute;
+    line-height: 1.2;
+    left: 2.5rem;
+    top: 2rem;
+  }
+  &__item {
+    position: relative;
+    width: 42.8rem;
+    height: 51.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("../images/background/categoryBackground.png") no-repeat;
+    background-size: contain;
+  }
+  &__item-img {
+    max-width: 25rem;
+    max-height: 28rem;
+  }
+  &__item-count {
+    position: absolute;
+    right: -2.5rem;
+    top: 16rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    width: 8.1rem;
+    height: 7.2rem;
+    border-radius: 50%;
+    padding: 0 2rem;
+    display: flex;
+    gap: 0.5rem;
+    transform: rotate(-23deg);
+    justify-content: center;
+    align-items: center;
+    background-color: #fa8fef;
+    span {
+      font-family: "Floreste", sans-serif;
+      font-weight: bold;
+      font-size: 4rem;
+    }
+  }
+  &__item-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 10.1rem;
+    height: 10.1rem;
+    border-radius: 60%;
+    background-color: #ebe3ff1a;
+    border: 0.1rem solid#d9ff5a;
+    bottom: -2rem;
+    left: 15.5rem;
+    svg {
+      width: 3.4rem;
+      height: 3.4rem;
+    }
+  }
+}
+
+.art {
+  width: 100%;
+  height: 26rem;
+  margin-bottom: 17rem;
+}
+
+.pagination-bullet {
+  width: 0.7rem;
+  height: 0.7rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(50%);
+  border-radius: 100%;
+  cursor: pointer;
+}
+.pagination-bullet--active {
+  background-color: white;
+}
+
+.blog {
+  &__container {
+    position: relative;
+  }
+  &__title {
+    display: flex;
+    gap: 4.5rem;
+    align-items: center;
+    margin-bottom: 7rem;
+    h2 {
+      font-size: 6rem;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+  }
+  &__slider {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-family: "Floreste";
+    font-weight: bold;
+    font-size: 4rem;
+  }
+  &__slider-line {
+    width: 6.3rem;
+    height: 0.2rem;
+    background-color: #cbb6ff;
+  }
+  &__pagination {
+    display: flex;
+    gap: 0.7rem;
   }
 }
