@@ -1,0 +1,22 @@
+<svg width="580.000000" height="342.000000" viewBox="0 0 580 342" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<filter id="filter_2532_4680_dd" x="0.000000" y="0.000000" width="580.000000" height="342.000000" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feGaussianBlur in="BackgroundImage" stdDeviation="33.3333"/>
+			<feComposite in2="SourceAlpha" operator="in" result="effect_backgroundBlur_1"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="effect_backgroundBlur_1" result="shape"/>
+		</filter>
+		<filter id="filter_2532_4681_dd" x="0.000000" y="0.000000" width="580.000000" height="342.000000" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feGaussianBlur in="BackgroundImage" stdDeviation="33.3333"/>
+			<feComposite in2="SourceAlpha" operator="in" result="effect_backgroundBlur_1"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="effect_backgroundBlur_1" result="shape"/>
+		</filter>
+	</defs>
+	<g filter="url(#filter_2532_4680_dd)">
+		<path id="форма" d="M337 0L540 0C562.092 0 580 17.9087 580 40L580 302C580 324.091 562.092 342 540 342L337 342C314.908 342 297 324.091 297 302L297 266C297 262.134 293.865 259 290 259C286.135 259 283 262.134 283 266L283 302C283 318.785 272.662 333.155 258.004 339.09C251.43 341.753 245.062 336.582 242.59 329.934C232.605 303.091 207.965 284 179.5 284C150.891 284 126.857 303.286 117.975 330.342C115.82 336.903 110.088 342 103.182 342L40 342C17.9082 342 0 324.091 0 302L0 40C0 17.9087 17.9082 0 40 0L243 0C265.092 0 283 17.9087 283 40L283 76C283 79.8662 286.135 83 290 83C293.865 83 297 79.8662 297 76L297 40C297 17.9087 314.908 0 337 0Z" clip-rule="evenodd" fill="#CBB6FF" fill-opacity="1.000000" fill-rule="evenodd"/>
+	</g>
+</svg>

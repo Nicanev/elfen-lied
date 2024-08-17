@@ -166,10 +166,32 @@ img {
   max-height: 100%;
 }
 
+.mobileHeader {
+  margin: 2.5rem 1.5rem;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  &__icons {
+    display: flex;
+    gap: 1.8rem;
+    svg {
+      width: 4.2rem;
+      height: 4.2rem;
+    }
+  }
+}
+
 @media (max-width: 48em) {
   html {
     font-size: calc((100 / 320) * 5vw);
     -webkit-text-size-adjust: none;
+  }
+
+  .header {
+    display: none;
+  }
+  .mobileHeader {
+    display: flex;
   }
 
   body {
@@ -343,6 +365,7 @@ a:hover {
   }
   &__list {
     display: flex;
+
     gap: 3rem;
   }
   &__item-title {
@@ -357,7 +380,7 @@ a:hover {
   }
   &__item {
     position: relative;
-    width: 42.8rem;
+    width: 40rem;
     height: 51.7rem;
     display: flex;
     align-items: center;
@@ -403,6 +426,14 @@ a:hover {
     border: 0.1rem solid#d9ff5a;
     bottom: -2rem;
     left: 15.5rem;
+    &:hover {
+      background-color: #d9ff5a;
+      transition: 0.2s ease;
+      path {
+        stroke: #ae97e8;
+        transition: 0.2s ease;
+      }
+    }
     svg {
       width: 3.4rem;
       height: 3.4rem;
@@ -431,6 +462,119 @@ a:hover {
 .blog {
   &__container {
     position: relative;
+  }
+  &__list {
+    display: flex;
+
+    gap: 3rem;
+  }
+  &__item {
+    position: relative;
+    width: 37.6rem;
+    height: 40rem;
+    display: flex;
+    gap: 1.4rem;
+  }
+  &__item-content {
+    position: relative;
+    width: 28.3rem;
+    height: 34.2rem;
+    border-radius: 1.4rem;
+    background: rgb(203, 182, 255);
+    &::before {
+      content: "";
+      position: absolute;
+      width: 10.5rem;
+      height: 9rem;
+      bottom: -5rem;
+      right: 1.4rem;
+      background-color: #ae97e8;
+      border-radius: 100%;
+    }
+  }
+  &__item-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  &__item-img {
+    width: 28.3rem;
+    height: 34.2rem;
+    padding: 1.3rem;
+    border-radius: 1.4rem;
+    backdrop-filter: blur(10rem);
+    background: rgb(203, 182, 255);
+    display: flex;
+    align-items: center;
+    img {
+      height: 100%;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: -2rem;
+      width: 19.1rem;
+      height: 17.6rem;
+      background: rgb(203, 182, 255);
+      z-index: -1;
+    }
+  }
+  &__item-title {
+    position: absolute;
+    font-size: 2.8rem;
+    font-weight: 500;
+    line-height: 1.2;
+    max-width: 19rem;
+    left: 2.5rem;
+    top: 9.2rem;
+  }
+  &__item-author {
+    position: absolute;
+    text-align: right;
+    font-size: 1.8rem;
+    font-weight: 500;
+    max-width: 6.5rem;
+    right: 2.5rem;
+    top: 2.5rem;
+  }
+  &__item-count {
+    position: absolute;
+    font-size: 1.5rem;
+    font-weight: 500;
+    left: 2.5rem;
+    top: 2.5rem;
+  }
+  &__item-time {
+    position: absolute;
+    font-size: 1.5rem;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    bottom: -5rem;
+    right: 2rem;
+    transform: rotate(-15deg);
+    border: 0.2rem solid rgb(217, 255, 90);
+    border-radius: 100%;
+    backdrop-filter: blur(2rem);
+    background: rgba(255, 255, 255, 0.19);
+    width: 9.6rem;
+    height: 8.1rem;
+    span {
+      font-family: "Floreste", sans-serif;
+      font-weight: bold;
+      font-size: 4rem;
+    }
+  }
+  &__item-date {
+    position: absolute;
+    font-size: 1.5rem;
+    font-weight: 500;
+    max-width: 8.2rem;
+    left: 2.5rem;
+    bottom: 2.5rem;
   }
   &__title {
     display: flex;

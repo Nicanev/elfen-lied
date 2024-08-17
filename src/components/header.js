@@ -10,6 +10,26 @@ import {
 export function createHeader() {
   const header = document.createElement("header");
   header.innerHTML = `
+  <header class="mobileHeader">
+    <a href="/" class="header__logo">
+          ${logoSvg}
+        </a>
+        <div class="mobileHeader__icons">
+        <a href="#">
+        ${searchIcon}
+        </a>
+        <a href="#">
+        ${heartIcon}
+        </a>
+         <a href="#">
+        ${userIcon}
+        </a>
+        <a href="#">
+        ${cartIcon}
+        </a>
+        </div>
+        
+  </header>
     <header class="header">
       <header class="header__container">
         <a href="/" class="header__logo">
