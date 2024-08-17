@@ -319,6 +319,9 @@ a:hover {
     align-items: center;
     cursor: pointer;
 
+    .hero__content {
+      display: none;
+    }
     &::before {
       content: "";
       position: absolute;
@@ -344,6 +347,10 @@ a:hover {
     position: relative;
     margin-left: 6rem;
     margin-right: 4rem;
+
+    .hero__content {
+      display: block;
+    }
     .hero__product-img {
       position: relative;
       z-index: 10;
