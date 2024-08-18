@@ -194,6 +194,15 @@ img {
     display: flex;
   }
 
+  .hero__slide {
+    display: none !important;
+  }
+
+  .hero__slide--active {
+    display: flex !important;
+    width: 100vw !important;
+  }
+
   body {
     -webkit-text-size-adjust: none;
   }
@@ -357,6 +366,11 @@ a:hover {
     }
     .hero__background {
       position: absolute;
+      font-family: "Floreste", sans-serif;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 20.2rem;
+      color: #cbb6ff60;
       z-index: 1;
     }
   }
